@@ -11,11 +11,15 @@ describe('Entry', () => {
     expect(entry.wordCount()).toEqual(3)
   })
   test('should recognize a vowel in a word', () =>{
-    const entry = new Entry("Today",["Todd"])
+    const entry = new Entry("Today",["Tadd"])
     expect(entry.vowelCount()).toEqual(1)
   })
-  test('should recognize any vowel in a word', () =>{
+  test('should recognize any vowels in a word', () =>{
     const entry = new Entry("Today",["Today"])
+    expect(entry.vowelCount()).toEqual(1)
+  })
+  test('should recognize any vowels in 2 or more words', () =>{
+    const entry = new Entry("Today",["Today","Eat"])
     expect(entry.vowelCount()).toEqual(1)
   })
  
