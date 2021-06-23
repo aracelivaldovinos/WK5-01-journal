@@ -1,4 +1,4 @@
-import Project from './project';
+import Project from './journal';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
