@@ -10,5 +10,13 @@ describe('Entry', () => {
     const entry = new Entry("Today",["Today" ,"was" ,"great"])
     expect(entry.wordCount()).toEqual(3)
   })
+  test('should recognize a vowel in a word', () =>{
+    const entry = new Entry("Today",["Todd"])
+    expect(entry.vowelCount()).toEqual(1)
+  })
+  test('should recognize any vowel in a word', () =>{
+    const entry = new Entry("Today",["Today"])
+    expect(entry.vowelCount()).toEqual(1)
+  })
  
 })
